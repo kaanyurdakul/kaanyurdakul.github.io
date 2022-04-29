@@ -1,36 +1,3 @@
-/* ------------------------------------------------
- Author: ArtStyles (Art)
- 
- Template Name: vCard
- version: 1.1.0
------------------------------------------------- */
-/* ------------------------------------------------
-
- - General Styles
- - Background
- - Typography
- - Preloader
- - Form
- - Button
- - Preloader
- - Sidebar
- - Sections
- - Navbar
- - Footer
- - Cases
- - Clients
- - Contact
- - Single post
- - Footer
- - Contact
- - Portfolio
- - News
- - Single news
- - Testimonials
- - Timeline
- - Other
- 
------------------------------------------------- */
 @import url(vendors/bootstrap.min.css);
 @import url(vendors/swiper.min.css);
 @import url(vendors/simplebar.min.css);
@@ -409,6 +376,14 @@ iframe {
 .cover {
   object-fit: cover;
   object-position: center;
+  font-family: 'object-fit: cover; object-position: center;';
+  height: 100%;
+  width: 100%;
+}
+
+.cover-pleft {
+  object-fit: cover;
+  object-position: left;
   font-family: 'object-fit: cover; object-position: center;';
   height: 100%;
   width: 100%;
@@ -1771,6 +1746,10 @@ button:focus {
 .gallery-grid__caption {
   padding-left: 0.1875rem;
 }
+
+.gallery-grid__caption a{
+  color:#44566C;
+}
 .gallery-grid__title {
   font-size: 0.9375rem;
   font-weight: 600;
@@ -2699,3 +2678,13 @@ button:focus {
 }
 
 /*# sourceMappingURL=style.css.map */
+
+/* -----------------------------------------------------------------
+    - Cst Coding
+----------------------------------------------------------------- */
+.box-cst{
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  position: relative;
+  z-index: 0;
+}
