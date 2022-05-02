@@ -1,4 +1,6 @@
-$(document).ready(function() {
+jQuery(window).on('load', function(){ 
+        
+    var $ = jQuery; 	
 
     'use strict';
 
@@ -451,42 +453,46 @@ $(document).ready(function() {
     /*-----------------------------------------------------------------
       Masonry
     -------------------------------------------------------------------*/	
-	
-    // Portfolio
-    var $portfolioMasonry = $('.js-masonry').isotope({
-        itemSelector: '.gallery-grid__item',
-	    layoutMode: 'fitRows',
-        percentPosition: true,
-	    transitionDuration: '0.5s',
-        hiddenStyle: {
-            opacity: 0,
-            transform: 'scale(0.001)'
-        },
-        visibleStyle: {
-            opacity: 1,
-            transform: 'scale(1)'
-        },
-        fitRows: {
-            gutter: '.gutter-sizer'
-        },	
-        masonry: {
-	        columnWidth: '.gallery-grid__item',
-            gutter: '.gutter-sizer',
-            isAnimated: true
-        }
-    });
-  
-    $portfolioMasonry.imagesLoaded().progress( function() {
-        $portfolioMasonry.isotope ({
-	        columnWidth: '.gallery-grid__item',
-            gutter: '.gutter-sizer',
-            isAnimated: true,
-	        layoutMode: 'fitRows',
+
+
+        // Portfolio
+        var $portfolioMasonry = $('.js-masonry').isotope({
+            itemSelector: '.gallery-grid__item',
+            layoutMode: 'fitRows',
+            percentPosition: true,
+            transitionDuration: '0.5s',
+            hiddenStyle: {
+                opacity: 0,
+                transform: 'scale(0.001)'
+            },
+            visibleStyle: {
+                opacity: 1,
+                transform: 'scale(1)'
+            },
             fitRows: {
                 gutter: '.gutter-sizer'
+            },	
+            masonry: {
+                columnWidth: '.gallery-grid__item',
+                gutter: '.gutter-sizer',
+                isAnimated: true
             }
-	    });
-    });	
+        });
+    
+        $portfolioMasonry.imagesLoaded().progress( function() {
+            $portfolioMasonry.isotope ({
+                columnWidth: '.gallery-grid__item',
+                gutter: '.gutter-sizer',
+                isAnimated: true,
+                layoutMode: 'fitRows',
+                fitRows: {
+                    gutter: '.gutter-sizer'
+                }
+            });
+        });
+
+
+
 
 	
     /*-----------------------------------------------------------------
