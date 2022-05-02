@@ -479,16 +479,18 @@ jQuery(window).on('load', function(){
             }
         });
     
-        $portfolioMasonry.imagesLoaded()(function() {
-            $portfolioMasonry.isotope ({
-                columnWidth: '.gallery-grid__item',
-                gutter: '.gutter-sizer',
-                isAnimated: true,
-                layoutMode: 'fitRows',
-                fitRows: {
-                    gutter: '.gutter-sizer'
-                }
-            });
+        $portfolioMasonry.imagesLoaded().progress( function() {
+            setTimeout(function(){ 
+                $portfolioMasonry.isotope ({
+                    columnWidth: '.gallery-grid__item',
+                    gutter: '.gutter-sizer',
+                    isAnimated: true,
+                    layoutMode: 'fitRows',
+                    fitRows: {
+                        gutter: '.gutter-sizer'
+                    }
+                });
+             }, 1000);
         });
 
 
