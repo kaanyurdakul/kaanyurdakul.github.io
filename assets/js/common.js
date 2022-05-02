@@ -479,7 +479,7 @@ jQuery(window).on('load', function(){
             }
         });
     
-        $portfolioMasonry.imagesLoaded().progress( function() {
+        $portfolioMasonry.imagesLoaded()(function() {
             $portfolioMasonry.isotope ({
                 columnWidth: '.gallery-grid__item',
                 gutter: '.gutter-sizer',
