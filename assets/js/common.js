@@ -490,7 +490,7 @@ jQuery(window).on('load', function(){
                         gutter: '.gutter-sizer'
                     }
                 });
-             }, 1000);
+             }, 2000);
         });
 
 
